@@ -3,21 +3,18 @@ package com.sussygaymer.j2dts.generator.transformers.interfaces;
 import java.util.ArrayList;
 
 import com.sussygaymer.j2dts.generator.TSBuilder;
-import com.sussygaymer.j2dts.generator.transformers.ArgumentTransformer;
-import com.sussygaymer.j2dts.generator.transformers.ReturnValueTransformer;
 import com.sussygaymer.j2dts.generator.transformers.Transformer;
-import com.sussygaymer.j2dts.generator.transformers.TypeParameterTransformer;
+import com.sussygaymer.j2dts.generator.transformers.values.ArgumentTransformer;
+import com.sussygaymer.j2dts.generator.transformers.values.ReturnValueTransformer;
+import com.sussygaymer.j2dts.generator.transformers.values.TypeParameterTransformer;
 
 import lombok.Getter;
 
+@Getter
 public class InterfaceMethodTransformer extends Transformer {
-    @Getter
     private InterfaceTransformer parent;
-    @Getter
     private ReturnValueTransformer returnValue;
-    @Getter
     private ArrayList<ArgumentTransformer> args = new ArrayList<ArgumentTransformer>();
-    @Getter
     protected ArrayList<TypeParameterTransformer> typeParameters = new ArrayList<TypeParameterTransformer>();
 
     public InterfaceMethodTransformer(String name, ReturnValueTransformer returnValue, InterfaceTransformer parent) {

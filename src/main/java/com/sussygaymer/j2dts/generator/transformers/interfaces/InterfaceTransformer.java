@@ -5,16 +5,14 @@ import java.util.ArrayList;
 import com.sussygaymer.j2dts.generator.TSBuilder;
 import com.sussygaymer.j2dts.generator.transformers.EntityTransformer;
 import com.sussygaymer.j2dts.generator.transformers.NamespaceTransformer;
-import com.sussygaymer.j2dts.generator.transformers.TypeParameterTransformer;
+import com.sussygaymer.j2dts.generator.transformers.values.TypeParameterTransformer;
 
 import lombok.Getter;
 
+@Getter
 public class InterfaceTransformer extends EntityTransformer {
-    @Getter
     private ArrayList<InterfaceMethodTransformer> methods = new ArrayList<InterfaceMethodTransformer>();
-    @Getter
     private ArrayList<InterfacePropertyTransformer> properties = new ArrayList<InterfacePropertyTransformer>();
-    @Getter
     private InterfaceTransformer parent = null;
 
     public InterfaceTransformer(String name, NamespaceTransformer namespace) {

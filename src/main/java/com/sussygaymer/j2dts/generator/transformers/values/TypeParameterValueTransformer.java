@@ -1,15 +1,15 @@
-package com.sussygaymer.j2dts.generator.transformers;
+package com.sussygaymer.j2dts.generator.transformers.values;
 
 import java.util.ArrayList;
 
 import com.sussygaymer.j2dts.generator.TSBuilder;
+import com.sussygaymer.j2dts.generator.transformers.EntityTransformer;
 
 import lombok.Getter;
 
+@Getter
 public class TypeParameterValueTransformer extends EntityTransformer {
-    @Getter
     private EntityTransformer target;
-    @Getter
     private ArrayList<ValueTransformer> parameters = new ArrayList<ValueTransformer>();
 
     public TypeParameterValueTransformer(EntityTransformer target) {

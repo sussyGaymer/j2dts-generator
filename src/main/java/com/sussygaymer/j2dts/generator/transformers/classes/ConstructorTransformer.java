@@ -3,13 +3,13 @@ package com.sussygaymer.j2dts.generator.transformers.classes;
 import java.util.ArrayList;
 
 import com.sussygaymer.j2dts.generator.TSBuilder;
-import com.sussygaymer.j2dts.generator.transformers.ArgumentTransformer;
 import com.sussygaymer.j2dts.generator.transformers.Transformer;
+import com.sussygaymer.j2dts.generator.transformers.values.ArgumentTransformer;
 
 import lombok.Getter;
 
+@Getter
 public class ConstructorTransformer extends Transformer {
-    @Getter
     private ArrayList<ArgumentTransformer> args = new ArrayList<ArgumentTransformer>();
 
     public void addArgument(ArgumentTransformer arg) {

@@ -2,20 +2,17 @@ package com.sussygaymer.j2dts.generator.transformers.classes;
 
 import com.sussygaymer.j2dts.generator.TSBuilder;
 import com.sussygaymer.j2dts.generator.transformers.Transformer;
-import com.sussygaymer.j2dts.generator.transformers.ValueTransformer;
-import com.sussygaymer.j2dts.generator.transformers.Visibility;
+import com.sussygaymer.j2dts.generator.transformers.values.ValueTransformer;
 
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter
 public class ClassPropertyTransformer extends Transformer {
-    @Getter
     private ClassTransformer parent;
-    @Getter
     private ValueTransformer type;
-    @Getter @Setter
+    @Setter
     private boolean isStatic = false;
-    @Getter @Setter
     private Visibility visibility = null;
 
     public ClassPropertyTransformer(String name, ValueTransformer type, ClassTransformer parent) {
@@ -49,3 +46,4 @@ public class ClassPropertyTransformer extends Transformer {
         return builder.getString();
     }
 }
+

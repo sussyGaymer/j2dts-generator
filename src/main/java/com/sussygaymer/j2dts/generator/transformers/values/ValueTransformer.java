@@ -1,15 +1,16 @@
-package com.sussygaymer.j2dts.generator.transformers;
+package com.sussygaymer.j2dts.generator.transformers.values;
 
 import java.util.Arrays;
 
 import com.sussygaymer.j2dts.generator.TSBuilder;
+import com.sussygaymer.j2dts.generator.transformers.EntityTransformer;
+import com.sussygaymer.j2dts.generator.transformers.Transformer;
 
 import lombok.Getter;
 
+@Getter
 public class ValueTransformer extends Transformer {
-    @Getter
     private boolean isArray;
-    @Getter
     private String value;
 
     public ValueTransformer(String type) {

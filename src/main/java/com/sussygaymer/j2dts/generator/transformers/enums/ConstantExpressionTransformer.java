@@ -1,11 +1,12 @@
-package com.sussygaymer.j2dts.generator.transformers;
+package com.sussygaymer.j2dts.generator.transformers.enums;
+
+import com.sussygaymer.j2dts.generator.transformers.Transformer;
 
 import lombok.Getter;
 
+@Getter
 public class ConstantExpressionTransformer extends Transformer {
-    @Getter
     private String stringValue = null;
-    @Getter
     private int numberValue = 0; // cant be null, optional wouldn't work either
 
     public ConstantExpressionTransformer(String value) {

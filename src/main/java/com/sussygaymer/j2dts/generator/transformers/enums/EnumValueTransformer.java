@@ -1,13 +1,12 @@
 package com.sussygaymer.j2dts.generator.transformers.enums;
 
 import com.sussygaymer.j2dts.generator.TSBuilder;
-import com.sussygaymer.j2dts.generator.transformers.ConstantExpressionTransformer;
 import com.sussygaymer.j2dts.generator.transformers.Transformer;
 
 import lombok.Getter;
 
+@Getter
 public class EnumValueTransformer extends Transformer {
-    @Getter
     private ConstantExpressionTransformer value;
 
     public EnumValueTransformer(String name, ConstantExpressionTransformer value) {

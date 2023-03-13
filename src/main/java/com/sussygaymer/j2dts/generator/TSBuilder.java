@@ -2,10 +2,9 @@ package com.sussygaymer.j2dts.generator;
 
 import lombok.Getter;
 
+@Getter
 public class TSBuilder {
-    @Getter
     private String string = "";
-    @Getter
     private int indentSize;
     
     public TSBuilder(int indentLevel) {

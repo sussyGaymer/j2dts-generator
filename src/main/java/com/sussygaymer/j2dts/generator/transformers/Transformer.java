@@ -2,8 +2,8 @@ package com.sussygaymer.j2dts.generator.transformers;
 
 import lombok.Getter;
 
+@Getter
 public abstract class Transformer {
-    @Getter
     protected String name;
     
     /**

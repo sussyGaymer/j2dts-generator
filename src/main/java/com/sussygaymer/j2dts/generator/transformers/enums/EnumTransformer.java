@@ -8,8 +8,8 @@ import com.sussygaymer.j2dts.generator.transformers.NamespaceTransformer;
 
 import lombok.Getter;
 
+@Getter
 public class EnumTransformer extends EntityTransformer {
-    @Getter
     private ArrayList<EnumValueTransformer> values = new ArrayList<EnumValueTransformer>();
 
     public EnumTransformer(String name, NamespaceTransformer namespace) {

@@ -5,23 +5,20 @@ import java.util.ArrayList;
 import com.sussygaymer.j2dts.generator.TSBuilder;
 import com.sussygaymer.j2dts.generator.transformers.EntityTransformer;
 import com.sussygaymer.j2dts.generator.transformers.NamespaceTransformer;
-import com.sussygaymer.j2dts.generator.transformers.TypeParameterTransformer;
-import com.sussygaymer.j2dts.generator.transformers.TypeParameterValueTransformer;
 import com.sussygaymer.j2dts.generator.transformers.interfaces.InterfaceTransformer;
+import com.sussygaymer.j2dts.generator.transformers.values.TypeParameterTransformer;
+import com.sussygaymer.j2dts.generator.transformers.values.TypeParameterValueTransformer;
 
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter
 public class ClassTransformer extends EntityTransformer {
-    @Getter @Setter
+    @Setter
     private boolean isAbstract = false;
-    @Getter
     private ArrayList<ClassMethodTransformer> methods = new ArrayList<ClassMethodTransformer>();
-    @Getter
     private ArrayList<ClassPropertyTransformer> properties = new ArrayList<ClassPropertyTransformer>();
-    @Getter
     private ArrayList<ConstructorTransformer> constructors = new ArrayList<ConstructorTransformer>();
-    @Getter
     private EntityTransformer parent = null;
 
     public ClassTransformer(String name, NamespaceTransformer namespace) {

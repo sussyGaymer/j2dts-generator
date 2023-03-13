@@ -1,11 +1,12 @@
-package com.sussygaymer.j2dts.generator.transformers;
+package com.sussygaymer.j2dts.generator.transformers.values;
+
+import com.sussygaymer.j2dts.generator.transformers.Transformer;
 
 import lombok.Getter;
 
+@Getter
 public class ArgumentTransformer extends Transformer {
-    @Getter
     private String name;
-    @Getter
     private ValueTransformer value;
     
     public ArgumentTransformer(String name, ValueTransformer value) {

@@ -1,17 +1,18 @@
-package com.sussygaymer.j2dts.generator.transformers;
+package com.sussygaymer.j2dts.generator.transformers.values;
 
 import com.sussygaymer.j2dts.generator.TSBuilder;
+import com.sussygaymer.j2dts.generator.transformers.EntityTransformer;
+import com.sussygaymer.j2dts.generator.transformers.Transformer;
 import com.sussygaymer.j2dts.generator.transformers.classes.ClassMethodTransformer;
 
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter
 public class TypeParameterTransformer extends Transformer {
-    @Getter @Setter
+    @Setter
     private ValueTransformer extend = null;
-    @Getter
     private EntityTransformer entityParent = null;
-    @Getter
     private ClassMethodTransformer methodParent = null;
     
     public TypeParameterTransformer(String name, EntityTransformer parent) {

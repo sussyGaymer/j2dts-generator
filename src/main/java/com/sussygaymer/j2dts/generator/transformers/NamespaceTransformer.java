@@ -9,12 +9,10 @@ import com.sussygaymer.j2dts.generator.transformers.interfaces.InterfaceTransfor
 
 import lombok.Getter;
 
+@Getter
 public class NamespaceTransformer extends Transformer {
-    @Getter
     private ArrayList<ClassTransformer> classes = new ArrayList<ClassTransformer>();
-    @Getter
     private ArrayList<InterfaceTransformer> interfaces = new ArrayList<InterfaceTransformer>();
-    @Getter
     private ArrayList<EnumTransformer> enums = new ArrayList<EnumTransformer>();
     
     public NamespaceTransformer(String name) {
